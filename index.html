@@ -68,7 +68,12 @@
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: fadeInUp 1s ease-in;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .project-card.animate {
+            animation: fadeInUp 1s ease-in forwards;
         }
 
         .project-card:hover {
@@ -285,8 +290,7 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('animate');
                 }
             });
         }, observerOptions);
@@ -297,7 +301,7 @@
 
         // Effet de parallaxe léger sur le scroll
         window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
+            const scrolled = window.scrollY;
             const parallax = document.querySelector('header');
             if (parallax) {
                 parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
