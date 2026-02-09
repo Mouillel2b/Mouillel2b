@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouillel2b - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: fadeInDown 1s ease-in;
+        }
+
+        header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-in;
+        }
+
+        .projects-section {
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: white;
+            margin-bottom: 50px;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease-in;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-card h3 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 1.05em;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: #764ba2;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>👋 Bienvenue sur mon Portfolio</h1>
+            <p>Développeur passionné | Créateur de solutions innovantes</p>
+        </header>
+
+        <section class="projects-section">
+            <h2 class="section-title">Mes Projets</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>🚀 Projet Web Moderne</h3>
+                    <p>Application web responsive développée avec les dernières technologies front-end. Interface utilisateur intuitive et design moderne.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Mouillel2b" class="project-link">Voir le code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>💻 Application Backend</h3>
+                    <p>API RESTful robuste avec authentification et base de données. Architecture scalable et sécurisée.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Mouillel2b" class="project-link">Voir le code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>📱 Application Mobile</h3>
+                    <p>Application mobile cross-platform offrant une expérience utilisateur fluide et performante.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Redux</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Mouillel2b" class="project-link">Voir le code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🎨 Design System</h3>
+                    <p>Bibliothèque de composants réutilisables avec documentation complète. Cohérence visuelle garantie.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Storybook</span>
+                        <span class="tech-tag">SASS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Mouillel2b" class="project-link">Voir le code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🔧 Outil DevOps</h3>
+                    <p>Automatisation des déploiements et pipelines CI/CD. Amélioration de la productivité de l'équipe.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">GitHub Actions</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Mouillel2b" class="project-link">Voir le code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🤖 Intelligence Artificielle</h3>
+                    <p>Modèle de machine learning pour la classification et prédiction. Précision optimisée.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Mouillel2b" class="project-link">Voir le code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2024 Mouillel2b | Connectez-vous avec moi sur <a href="https://github.com/Mouillel2b" style="color: white; text-decoration: underline;">GitHub</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Effet de parallaxe léger sur le scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('header');
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
